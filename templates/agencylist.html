@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div  class="row container-fluid">
+  <div class="col-12" style="padding:250px">
+      <center>
+      {% for ob in obj %}
+    <table class="table table-bordered border-dark w-100" style="text-align:center;color:white">
+      <thead>
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">PHONE</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">ABOUT</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <a href="{% url 'agentlink' ob.name %}"> {{ob.name}} </a>
+        </td>
+         <td>
+          {{ob.phone}}
+        </td>
+         <td>
+          {{ob.email}}
+        </td>
+         <td>
+             {{ob.bio}}
+         </td>
+
+
+      </tr>
+
+      </tbody>
+    </table>
+    {% endfor %}
+
+  </center>
+  </div>
+</div>
+
+{% endblock %}

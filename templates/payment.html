@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+<div  class="row container-fluid">
+  <div class="col-12" style="padding:250px;color:white">
+      <center>
+          <h2> Pay Now </h2>
+          <form action="pay">
+              {% csrf_token %}
+              <div class="mb-3">
+                  <label class="form-label">Name</label>
+                  <input type="text" name="username" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label">College Name</label>
+                  <input type="text" name="agent" class="form-control" required >
+              </div>
+              <div class="mb-3">
+                  <label class="form-label">Scan QR</label>
+                  <img name="qr" class="form-control" src="{% static 'images/qr.png' %}" style="height:600px;width:600px" >
+              </div>
+
+              <div class="mb-3">
+                  <label class="form-label">Transaction ID</label>
+                  <input type="number" name="chat" class="form-control" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+      </center>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div  class="row container-fluid">
+  <div class="col-12" style="padding:250px">
+      <center>
+      {% for p in profile %}
+    <table class="table table-bordered border-dark w-100" style="text-align:center;color:white">
+      <thead>
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">AGE</th>
+        <th scope="col">PHONE</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">ABOUT</th>
+        <th scope="col">ADDRESS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          {{p.name}}
+        </td>
+         <td>
+          {{p.age}}
+        </td>
+         <td>
+          {{p.phone}}
+        </td>
+         <td>
+          {{p.email}}
+        </td>
+         <td>
+          {{p.about}}
+        </td>
+         <td>
+          {{p.address}}
+        </td>
+
+      </tr>
+
+      </tbody>
+    </table>
+      <a href="{% url 'profile-edit' p.id %}"  style="text-decoration:none ; color:#fff">
+                <button type="button" class="btn btn-info">
+                  Edit Profile
+                </button>
+                 </a>
+    {% endfor %}
+
+  </center>
+  </div>
+</div>
+
+{% endblock %}

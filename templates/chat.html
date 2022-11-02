@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div  class="row container-fluid">
+  <div class="col-12" style="padding:250px;color:white">
+      <center>
+          <h2> Chat Now </h2>
+          <form action="chat" method="post">
+              {% csrf_token %}
+              <div class="mb-3">
+                  <label class="form-label">UserName</label>
+                  <input type="text" name="username" class="form-control" >
+              </div>
+              <div class="mb-3">
+                  <label class="form-label">Agent</label>
+                  <input type="text" name="agent" class="form-control" >
+              </div>
+              <div class="mb-3">
+                  <label class="form-label">Just tell your queries</label>
+                  <input type="text" name="chat" class="form-control" >
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+      </center>
+  </div>
+</div>
+
+{% endblock %}

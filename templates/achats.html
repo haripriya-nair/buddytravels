@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div  class="row container-fluid">
+  <div class="col-12" style="padding:250px">
+      <center>
+
+    <table class="table table-bordered border-dark w-100" style="text-align:center;color:white">
+      <thead>
+      <tr>
+        <th scope="col">USERNAME</th>
+        <th scope="col">MESSAGE</th>
+          <th scope="col">REPLY</th>
+        <th></th>
+      </tr>
+      </thead>
+        {% for ms in msg %}
+      <tbody>
+      <tr>
+        <td>
+           {{ms.user}}
+        </td>
+         <td>
+          {{ms.message}}
+        </td>
+          <td>
+            {{ms.reply}}
+          </td>
+         <td>
+          <a type="button" href="{% url 'reply' ms.id %}">Reply</a>
+        </td>
+
+
+
+      </tr>
+
+      </tbody>
+        {% endfor %}
+    </table>
+
+
+  </center>
+  </div>
+</div>
+
+{% endblock %}

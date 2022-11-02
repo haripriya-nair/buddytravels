@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+  font-family:sans-serif;
+  margin-left: 10px;
+  scroll-behavior:smooth;
+  padding-left:10px;
+  padding-right:10px;
+   margin-right: 10px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 25px;
+  margin-right:25px;
+
+
+
+}
+.card:hover{
+transform:scale(1.3);
+box-shadow:2px 2px 2px #000;
+z-index: 2;
+}
+
+
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+.center{
+margin:auto;
+width:100%;
+border:5px  black;
+padding-left:10%;
+padding-right:10%;
+background-image:url("static/EVENT3.jpg");
+
+.card{
+width:100%;
+margin-left:10px;
+
+a:link{
+color:red;
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color:red;
+
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background:#3B5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+    </style>
+
+</head>
+
+
+
+
+<body>
+     <nav class="navbar navbar-expand-lg navbar-light bg-success fixed-top">
+  <div class="container-fluid">
+      <img
+          src="{% static 'images/B.png' %}"
+          width="80"
+          height="80"
+          class="d-inline-block align-center rounded-circle"
+          alt=""
+        />
+    <a class="navbar-brand text-light fw-bold" href="#" style="font-family: system-ui;"><marquee direction="left">IV Backpacker Travel Buddy</marquee></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding-left:20%">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#carouselExampleCaptions"><b>Home</b></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#About us"><b>About us</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#events"><b>Events</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#footer"><b>Contact</b></a>
+        </li>
+
+
+      </ul>
+
+        <form class="text-right" style="padding-right:50px;" action="index/" method="">
+              <button type="submit" >Sign in</button>
+        </form>
+
+    </div>
+  </div>
+</nav>
+     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+         <div class="carousel-inner">
+             <div class="carousel-item active" data-bs-interval="2000">
+                 <img src="static/pexels-matheus-bertelli-2598630.jpg" class="d-block w-100" alt="..." height="600px">
+             </div>
+             <div class="carousel-item" data-bs-interval="2500">
+                 <img src="static/pexels-marcelo-chagas-1854873.jpg" class="d-block w-100" alt="..." height="600px">
+             </div>
+             <div class="carousel-item" data-bs-interval="2500">
+                 <img src="static/pexels-jason-toevs-2033343.jpg" class="d-block w-100" alt="..." height="600px">
+             </div>
+             <div class="carousel-item" data-bs-interval="2500">
+                 <img src="static/pexels-helena-lopes-697244.jpg" class="d-block w-100" alt="..." height="600px">
+             </div>
+             <div class="carousel-item" data-bs-interval="2500">
+                 <img src="static/pexels-ketut-subiyanto-4246101.jpg" class="d-block w-100" alt="..." height="600px">
+             </div>
+         </div>
+
+     </div>
+
+
+    <br><br><br><div>&nbsp;</div><br>
+
+     <div class="container">
+<div class="row">
+
+    </class>
+
+     <div class="col-md-4">
+     <div class="imgAbt">
+        <img  width="300" height="300" src="static/pexels-ketut-subiyanto-4246101.jpg">
+     </div>
+     </div>
+    <div class="col-md-8 p-5">
+        <p><i>" A journey of a thousands and niles begins with a single step.Explore your education through your each trip."</i></p>
+   <br> <p style="text-align:right" color="red"><i><b>-LET'S GO.....</b></i></p></div>
+</div>
+
+</div><br><br><br>
+
+
+
+
+
+
+
+     <div class="about-section" id="About us" style="padding-right:15px">
+  <h2>About Us Page</h2><br>
+         <h5> IV Backpacker  Travel Buddy</h5>
+  <p>Learning does not stop in the classroom.Travelling in the youger sort is a part of education.<br></p>
+  <p>Educating leaders of character since 1890's.</p><br> <br>
+
+              <a type="button" href="viewmore/">view more</a>
+
+     </div><div>&nbsp;&nbsp;</div><br>
+
+<h2 style="text-align:center">MAIN TRIPS</h2>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card" >
+      <img src="static/Isro.jpeg" alt="Jane" style="width:100%" height="190px;">
+      <div class="container">
+        <h2>ISRO</h2>
+        <p class="title"><b>Big exploration</b></p>
+        <p>The indian space research organisation is the national space agency of india,It operates under department of space</p>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card">
+        <img src="static/IIT .jpeg" alt="Jane" style="width:100%" height="190px;">
+      <div class="container">
+        <h2>IIT</h2>
+        <p class="title"> <b>Big exploration</b></p>
+        <p>Indian institute of technology madras is best institute for higher education in india.It is puiblic technical and research university located in india </p>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card">
+      <img src="static/iim.jpeg" alt="John" style="width:100%" height="190px;" >
+      <div class="container">
+        <h2>IIM</h2>
+        <p class="title">Big exploration</p>
+        <p>The indian institute of management are central government owned public bussiness schools for management profession offering undergraduate,pg doctrol and additional courses of bussiness management. </p>
+
+
+      </div>
+    </div>
+  </div>
+</div><br><br><br><br>
+
+
+
+
+     <div class="card-group">
+  <div class="card" style="background-image: url('static/background-imageside.jpg');">
+
+    <div class="card-body" >
+      <center><h5 class="card-title"><b><i>TRAVEL</i></b></h5></center>
+      <p class="card-text"><i>Travel is still  the most intense  mode of learning </i></p>
+
+    </div>
+  </div>
+  <div class="card" style="background-image: url('static/backgroundimage-center.jpg');">
+
+    <div class="card-body">
+      <center><h5 class="card-title"><b><i>LEARN</i></b></h5></center>
+      <p class="card-text"><i>Travel is like an endless university.You never stop learning..</i></p>
+
+    </div>
+  </div>
+  <div class="card" style="background-image: url('static/background-imageside.jpg');">
+
+    <div class="card-body">
+      <center><h5 class="card-title"><b><i>Enjoy</i></b></h5></center>
+      <p class="card-text"> <i>Enjoy your each Trip with us.</i></p>
+
+    </div>
+  </div>
+</div>
+
+
+
+     <br><br>
+     <center><h3>COMING EVENTS</h3></center><br>
+     <div class="center">
+         <div class ="container" id="events">
+             <h3> <b>   </b></h3>
+             <center> <h4> <a href="event1/" style="font-family: system-ui;"><marquee direction="right" width="100%" height="40px;" scrolldelay="100"  loop="">presentation of prof.Albert</marquee></a></h4></center>
+           <h4>  <a href="event2/" style="font-family: system-ui;" ><marquee direction="left" width="100%" height="40px;" scrolldelay="100">6 months Internship</marquee></a></h4>
+            <h4> <a href="event3/" style="font-family: system-ui;"><marquee direction="right"  width="100%" height="40px;" scrolldelay="100">IV Magazine presentation</marquee></a></h4>
+            <h4> <a href="event4/" style=font-family: system-ui; ><marquee direction="left" width="100%"  height="40px;" scrolldelay="100">Agency meet up</marquee></a></h4>
+         </div>
+
+     </div><div>&nbsp;&nbsp;&nbsp;</div><br><br>
+
+
+
+      <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Get In Touch</h4>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Projects</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Popular Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Projects</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Newsletter</h4>
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control border-0" placeholder="Your Name" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control border-0" placeholder="Your Email" required="required" />
+                    </div>
+                    <div>
+                        <button class="btn btn-lg btn-primary btn-block border-0" type="submit">Submit Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container border-top border-secondary pt-5">
+            <p class="m-0 text-center text-white">
+                &copy; <a class="text-white font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved. Designed by
+                <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+</html>

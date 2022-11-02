@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div  class="row">
+  <div class="col-12">
+    <table class="table table-bordered border-dark w-50" style="text-align:center">
+      <thead>
+      <tr>
+          <th scope="col">NAME</th>
+          <th scope="col">PHONE</th>
+          <th scope="col">EMAIL</th>
+          <th scope="col">BIO</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for p in profile %}
+      <tr>
+        <td>
+          {{p.name}}
+        </td>
+         <td>
+          {{p.phone}}
+        </td>
+         <td>
+          {{p.email}}
+        </td>
+         <td>
+          {{p.bio}}
+        </td>
+
+      </tr>
+
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

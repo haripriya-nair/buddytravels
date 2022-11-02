@@ -1,0 +1,127 @@
+{% extends 'main.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div  class="row container-fluid">
+  <div class="col-12" style="padding:50px">
+      <center>
+          <h3 style="color:white">AGENTS</h3><br><br>
+    <table class="table table-bordered border-dark w-100" style="text-align:center;color:white">
+      <thead>
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">PHONE</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">ID PROOF</th>
+        <th scope="col">BIO</th>
+      </tr>
+      </thead>
+        {% for p in ag %}
+      <tbody>
+      <tr>
+        <td>
+          {{p.name}}
+        </td>
+         <td>
+          {{p.phone}}
+        </td>
+         <td>
+          {{p.email}}
+        </td>
+         <td>
+          <img style="width:50px;height:50px"  src="{{p.id_proof.url}}">
+        </td>djdd
+         <td>
+          {{p.bio}}
+        </td>
+          <td>
+             <a  type="button" class="btn btn-primary change" href="{% url 'accept' p.phone %}">Accept</a>
+          </td>
+          <td>
+              <a type="button" class="btn btn-primary change" href="{% url 'reject' p.phone %}">Reject</a>
+          </td>
+
+      </tr>
+
+      </tbody>
+        {% endfor %}
+    </table>
+
+      <br><br><br>
+
+     <h3 style="color:white">PHOTOGRAPHERS</h3><br><br>
+    <table class="table table-bordered border-dark w-100" style="text-align:center;color:white">
+      <thead>
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">AGE</th>
+        <th scope="col">PHONE</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">ABOUT</th>
+        <th scope="col">ADDRESS</th>
+      </tr>
+      </thead>
+        {% for p in ph %}
+      <tbody>
+      <tr>
+        <td>
+          {{p.name}}
+        </td>
+         <td>
+          {{p.age}}
+        </td>
+         <td>
+          {{p.phone}}
+        </td>
+         <td>
+          {{p.email}}
+        </td>
+         <td>
+          {{p.about}}
+        </td>
+         <td>
+          {{p.address}}
+        </td>
+
+      </tr>
+
+      </tbody>
+        {% endfor %}
+    </table>
+      <br><br><br>
+          <h3 style="color:white">STUDENTS</h3><br><br>
+    <table class="table table-bordered border-dark w-100" style="text-align:center;color:white">
+      <thead>
+      <tr>
+
+        <th scope="col">PHONE</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">COLLEGE ID</th>
+      </tr>
+      </thead>
+        {% for p in us %}
+      <tbody>
+      <tr>
+         <td>
+          {{p.phone}}
+        </td>
+         <td>
+          {{p.email}}
+        </td>
+         <td>
+          <img style="width:50px;height:50px" src='{{p.id_image.url}}'>
+        </td>
+
+      </tr>
+
+      </tbody>
+        {% endfor %}
+    </table>
+
+
+  </center>
+  </div>
+</div>
+
+{% endblock %}

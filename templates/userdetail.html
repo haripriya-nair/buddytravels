@@ -1,0 +1,36 @@
+{% extends 'main.html' %} 
+
+{% block content %} 
+<br>
+
+<div class="contianer text-white ">
+    <center>
+    <h4> User Detail</h4>
+
+    <div class="card text-white bg-dark rounded-0" style="width:400px;height:400px">
+      <img class="card-img-top" src="{{u.id_image.url}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{u.username}}</h5>
+        <p class="card-text"></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-dark">Email:{{u.email}}</li>
+        <li class="list-group-item bg-dark">Phone:{{u.phone}}</li>
+    {% comment %}
+        <li class="list-group-item bg-dark">{% for ord in orders %}
+        {% if ord.boarding %}
+
+        {{ord.boarding}}
+
+        {{ord.}}
+        {% endfor %} {% endcomment %}
+        </li>
+      </ul>
+ 
+    </div>
+    </center>
+
+</div>
+{% endblock content %}
+
+
